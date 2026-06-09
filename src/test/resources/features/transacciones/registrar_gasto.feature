@@ -1,5 +1,5 @@
 #Actor:User
-
+@transacciones
 Feature: Register expense
   I as a registered user
   need to register an expense in the system

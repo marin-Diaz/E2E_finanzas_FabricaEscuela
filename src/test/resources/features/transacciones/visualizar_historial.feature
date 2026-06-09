@@ -1,5 +1,5 @@
 #Actor:User
-
+@transacciones
 Feature: View transaction history
   I as a registered user
   need to view my transaction history

@@ -25,7 +25,7 @@ public class RegistrarTransaccionSteps {
 
     private Actor usuario;
 
-    @Before
+    @Before("@transacciones")
     public void configurarEscenario() {
         OnStage.setTheStage(new OnlineCast());
         usuario = OnStage.theActorCalled("Andrea");
@@ -101,7 +101,7 @@ public class RegistrarTransaccionSteps {
 
     @Then("the system displays the message {string}")
     public void verificarMensaje(java.lang.String mensajeEsperado) {
-        usuario.should(
+        OnStage.theActorInTheSpotlight().should(
                 seeThat(MensajeAlerta.texto(), containsString(mensajeEsperado))
         );
     }

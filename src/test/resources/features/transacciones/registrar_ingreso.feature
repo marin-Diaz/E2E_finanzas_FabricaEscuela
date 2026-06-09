@@ -1,5 +1,5 @@
 #Actor:User
-
+@transacciones
 Feature: Register income
   I as a registered user
   need to register an income in the system
