@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Register expense","Successful expense registration with valid data","SUCCESS","2026-06-09T18:14:20.5445144-05:00[America/Bogota]","0.0","11.3"
+"Register expense","Failed expense registration due to empty amount","SUCCESS","2026-06-09T18:14:52.9711252-05:00[America/Bogota]","0.0","2.76"
+"Register expense","Failed expense registration due to no category selected","SUCCESS","2026-06-09T18:15:09.7110055-05:00[America/Bogota]","0.0","2.31"

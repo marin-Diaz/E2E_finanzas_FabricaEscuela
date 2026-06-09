@@ -2,14 +2,22 @@ buildscript {
     repositories {
         mavenCentral()
     }
+
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:3.3.4")
+    }
+
+
 }
 
 plugins {
-	id 'io.github.jumosqu12.screenplayarchitecture' version '2.0.1'
-	id 'java'
+    id 'io.github.jumosqu12.screenplayarchitecture' version '2.0.1'
+    id 'java'
     id 'eclipse'
     id 'idea'
 }
+
+apply plugin: 'net.serenity-bdd.serenity-gradle-plugin'
 
 group 'co.edu.udea.qa'
 
@@ -29,6 +37,7 @@ ext {
     junit = '4.13.2'
     hamcrest = '1.3'
     serenityWebVersion = '4.1.0'
+    restAssuredVersion = '5.3.2'
 }
 
 dependencies {
@@ -39,23 +48,23 @@ dependencies {
     implementation 'org.slf4j:slf4j-simple:2.0.5'
     implementation "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityWebVersion"
 
+    // RestAssured para obtener token JWT sin UI
+    implementation "io.rest-assured:rest-assured:$rootProject.ext.restAssuredVersion"
+
     //Test compilation
     testImplementation "junit:junit:$rootProject.ext.junit"
     testImplementation "org.hamcrest:hamcrest-all:$rootProject.ext.hamcrest"
-    implementation 'org.slf4j:slf4j-simple:2.0.5'
     testImplementation("io.github.bonigarcia:webdrivermanager:5.4.1")
 
     //Lombok dependencies
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
-    annotationProcessor  "org.projectlombok:lombok:${lombokVersion}"
-    testCompileOnly  "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
 
     //Additional library
     implementation group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.12.0'
-
 }
 
 tasks.named('test') {
     // System configs
-
 }

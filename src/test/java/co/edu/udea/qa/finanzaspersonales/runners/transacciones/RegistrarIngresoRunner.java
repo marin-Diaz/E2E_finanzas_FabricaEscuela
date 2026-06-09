@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/.../",
+        features = "src/test/resources/features/transacciones/registrar_ingreso.feature",
         glue = "co.edu.udea.qa.finanzaspersonales.stepdefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )

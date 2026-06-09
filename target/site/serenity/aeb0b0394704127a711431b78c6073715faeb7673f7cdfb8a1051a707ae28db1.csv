@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Register income","Successful income registration with valid data","SUCCESS","2026-06-09T18:03:34.6778738-05:00[America/Bogota]","0.0","6.19"
+"Register income","Failed income registration due to empty amount","SUCCESS","2026-06-09T18:04:00.5724229-05:00[America/Bogota]","0.0","2.37"
+"Register income","Failed income registration due to no category selected","SUCCESS","2026-06-09T18:04:17.1480241-05:00[America/Bogota]","0.0","2.39"
