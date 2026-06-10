@@ -1,16 +1,13 @@
 package co.edu.udea.qa.finanzaspersonales.tasks;
 
 import co.edu.udea.qa.finanzaspersonales.interactions.ClickRegistrar;
+import co.edu.udea.qa.finanzaspersonales.interactions.IngresarConcepto;
+import co.edu.udea.qa.finanzaspersonales.interactions.IngresarFecha;
+import co.edu.udea.qa.finanzaspersonales.interactions.IngresarMonto;
 import co.edu.udea.qa.finanzaspersonales.interactions.SeleccionarCategoria;
-import co.edu.udea.qa.finanzaspersonales.userinterfaces.TransaccionUI;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.actions.Enter;
-import net.thucydides.core.webdriver.ThucydidesWebDriverSupport;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 
 public class RegistrarTransaccion implements Task {
 
@@ -62,29 +59,21 @@ public class RegistrarTransaccion implements Task {
                     SeleccionarCategoria.conValor(obtenerValorCategoria(categoria))
             );
         }
-
         if (!concepto.isEmpty()) {
             actor.attemptsTo(
-                    Enter.theValue(concepto).into(TransaccionUI.INPUT_CONCEPTO)
+                    IngresarConcepto.conValor(concepto)
             );
         }
         if (!monto.isEmpty()) {
             actor.attemptsTo(
-                    Enter.theValue(monto).into(TransaccionUI.INPUT_MONTO)
+                    IngresarMonto.conValor(monto)
             );
         }
         if (!fecha.isEmpty()) {
-            WebElement inputFecha = ThucydidesWebDriverSupport.getDriver()
-                    .findElement(By.cssSelector("input[type='datetime-local']"));
-            JavascriptExecutor js2 = (JavascriptExecutor) ThucydidesWebDriverSupport.getDriver();
-            js2.executeScript("arguments[0].value = arguments[1]", inputFecha, fecha);
-            js2.executeScript(
-                    "arguments[0].dispatchEvent(new Event('input', {bubbles: true})); " +
-                            "arguments[0].dispatchEvent(new Event('change', {bubbles: true}));",
-                    inputFecha
+            actor.attemptsTo(
+                    IngresarFecha.conValor(fecha)
             );
         }
-
         actor.attemptsTo(
                 ClickRegistrar.enBoton()
         );
