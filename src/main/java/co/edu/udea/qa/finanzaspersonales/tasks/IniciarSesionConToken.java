@@ -1,10 +1,11 @@
 package co.edu.udea.qa.finanzaspersonales.tasks;
 
+import co.edu.udea.qa.finanzaspersonales.interactions.autenticacion.IngresarEmail;
+import co.edu.udea.qa.finanzaspersonales.interactions.autenticacion.IngresarPassword;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.webdriver.ThucydidesWebDriverSupport;
@@ -53,10 +54,6 @@ public class IniciarSesionConToken implements Task {
             return;
         }
 
-        Target INPUT_EMAIL = Target.the("email")
-                .located(By.cssSelector("input[type='email']"));
-        Target INPUT_PASSWORD = Target.the("password")
-                .located(By.cssSelector("input[type='password']"));
         Target BOTON_LOGIN = Target.the("boton login")
                 .located(By.cssSelector("button[type='submit']"));
 
@@ -65,8 +62,8 @@ public class IniciarSesionConToken implements Task {
         );
 
         actor.attemptsTo(
-                Enter.theValue(getUserEmail()).into(INPUT_EMAIL),
-                Enter.theValue(getUserPassword()).into(INPUT_PASSWORD),
+                IngresarEmail.conValor(getUserEmail()),
+                IngresarPassword.conValor(getUserPassword()),
                 Click.on(BOTON_LOGIN)
         );
     }

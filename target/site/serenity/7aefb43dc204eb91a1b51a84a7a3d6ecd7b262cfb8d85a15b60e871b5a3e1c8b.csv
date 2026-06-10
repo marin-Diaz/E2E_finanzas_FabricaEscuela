@@ -1,4 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Register user","Failed registration due to invalid password","SUCCESS","2026-06-10T07:38:13.4092071-05:00[America/Bogota]","0.0","0.28"
-"Register expense","Successful expense registration with valid data","SUCCESS","2026-06-10T08:02:04.6484184-05:00[America/Bogota]","0.0","15.68"
-"Register income","Successful income registration with valid data","SUCCESS","2026-06-10T07:50:53.6818655-05:00[America/Bogota]","0.0","11.41"
+"Register user","Failed registration due to invalid password","SUCCESS","2026-06-10T08:24:43.1852676-05:00[America/Bogota]","0.0","0.25"
+"Register expense","Successful expense registration with valid data","SUCCESS","2026-06-10T08:25:56.1996906-05:00[America/Bogota]","0.0","10.01"

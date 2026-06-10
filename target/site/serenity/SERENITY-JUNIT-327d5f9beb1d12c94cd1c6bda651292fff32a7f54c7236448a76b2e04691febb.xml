@@ -1,30 +1,81 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="3" name="User login" skipped="0" tests="4" time="7.73" timestamp="2026-06-10 07:36:45"><testcase name="Successful login with valid credentials"/><testcase name="Failed login due to incorrect credentials"><failure message="&#10;Expected: a string containing &quot;Correo o contraseña incorrectos&quot;&#10;     but: was &quot;✕&#10;Correo o contrasena incorrectos&quot;" type="java.lang.AssertionError">
-Expected: a string containing "Correo o contraseña incorrectos"
-     but: was "✕
-Correo o contrasena incorrectos"</failure><system-err>
-Expected: a string containing "Correo o contraseña incorrectos"
-     but: was "✕
-Correo o contrasena incorrectos"&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="4" failures="0" name="User login" skipped="0" tests="4" time="7.51" timestamp="2026-06-10 08:22:49"><testcase name="Successful login with valid credentials"><error message="Expected condition failed: waiting for url to contain &quot;/dashboard&quot;. Current url: &quot;https://finance-app-ui.vercel.app/login&quot; (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.16.1', revision: '9b4c83354e'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'&#10;Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade&#10;Build info: version: '4.16.1', revision: '9b4c83354e'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.TimeoutException">Expected condition failed: waiting for url to contain "/dashboard". Current url: "https://finance-app-ui.vercel.app/login" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: driver.version: unknown</error><system-err>Expected condition failed: waiting for url to contain "/dashboard". Current url: "https://finance-app-ui.vercel.app/login" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: driver.version: unknown&#13;
+co.edu.udea.qa.finanzaspersonales.stepdefinitions.AutenticacionSteps.verificarRedirectDashboard(AutenticacionSteps.java:75)&#13;
+✽.I am redirected to the dashboard(file:///C:/Workspace/E2E_finanzas_FrabricaE/src/test/resources/features/autenticacion/inicio_sesion.feature:10)&#13;
+</system-err></testcase><testcase name="Failed login due to incorrect credentials"><error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div.alert.alert--error, div.alert.alert--success&quot;}&#10;  (Session info: chrome=149.0.7827.55)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: '4.16.1', revision: '9b4c83354e'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [80814fd7e41b3acfe04ecb669336e1b2, findElement {using=css selector, value=div.alert.alert--error, div.alert.alert--success}]&#10;Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.55, chrome: {chromedriverVersion: 149.0.7827.55 (3188f8a607ae..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42620}, goog:processID: 28184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:42620/devtoo..., se:cdpVersion: 149.0.7827.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 80814fd7e41b3acfe04ecb669336e1b2" type="org.openqa.selenium.NoSuchElementException">no such element: Unable to locate element: {"method":"css selector","selector":"div.alert.alert--error, div.alert.alert--success"}
+  (Session info: chrome=149.0.7827.55)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [80814fd7e41b3acfe04ecb669336e1b2, findElement {using=css selector, value=div.alert.alert--error, div.alert.alert--success}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.55, chrome: {chromedriverVersion: 149.0.7827.55 (3188f8a607ae..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42620}, goog:processID: 28184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:42620/devtoo..., se:cdpVersion: 149.0.7827.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 80814fd7e41b3acfe04ecb669336e1b2</error><system-err>no such element: Unable to locate element: {"method":"css selector","selector":"div.alert.alert--error, div.alert.alert--success"}
+  (Session info: chrome=149.0.7827.55)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [80814fd7e41b3acfe04ecb669336e1b2, findElement {using=css selector, value=div.alert.alert--error, div.alert.alert--success}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.55, chrome: {chromedriverVersion: 149.0.7827.55 (3188f8a607ae..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42620}, goog:processID: 28184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:42620/devtoo..., se:cdpVersion: 149.0.7827.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 80814fd7e41b3acfe04ecb669336e1b2&#13;
+co.edu.udea.qa.finanzaspersonales.questions.MensajeAlerta.answeredBy(MensajeAlerta.java:20)&#13;
+co.edu.udea.qa.finanzaspersonales.questions.MensajeAlerta.answeredBy(MensajeAlerta.java:12)&#13;
 co.edu.udea.qa.finanzaspersonales.stepdefinitions.RegistrarTransaccionSteps.verificarMensaje(RegistrarTransaccionSteps.java:104)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
-</system-err></testcase><testcase name="Failed login due to empty fields"><failure message="&#10;Expected: a string containing &quot;Error de validación en los datos enviados&quot;&#10;     but: was &quot;✕&#10;Error de validacion en los datos enviados&quot;" type="java.lang.AssertionError">
-Expected: a string containing "Error de validación en los datos enviados"
-     but: was "✕
-Error de validacion en los datos enviados"</failure><system-err>
-Expected: a string containing "Error de validación en los datos enviados"
-     but: was "✕
-Error de validacion en los datos enviados"&#13;
+</system-err></testcase><testcase name="Failed login due to empty fields"><error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div.alert.alert--error, div.alert.alert--success&quot;}&#10;  (Session info: chrome=149.0.7827.55)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: '4.16.1', revision: '9b4c83354e'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [80814fd7e41b3acfe04ecb669336e1b2, findElement {using=css selector, value=div.alert.alert--error, div.alert.alert--success}]&#10;Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.55, chrome: {chromedriverVersion: 149.0.7827.55 (3188f8a607ae..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42620}, goog:processID: 28184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:42620/devtoo..., se:cdpVersion: 149.0.7827.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 80814fd7e41b3acfe04ecb669336e1b2" type="org.openqa.selenium.NoSuchElementException">no such element: Unable to locate element: {"method":"css selector","selector":"div.alert.alert--error, div.alert.alert--success"}
+  (Session info: chrome=149.0.7827.55)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [80814fd7e41b3acfe04ecb669336e1b2, findElement {using=css selector, value=div.alert.alert--error, div.alert.alert--success}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.55, chrome: {chromedriverVersion: 149.0.7827.55 (3188f8a607ae..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42620}, goog:processID: 28184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:42620/devtoo..., se:cdpVersion: 149.0.7827.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 80814fd7e41b3acfe04ecb669336e1b2</error><system-err>no such element: Unable to locate element: {"method":"css selector","selector":"div.alert.alert--error, div.alert.alert--success"}
+  (Session info: chrome=149.0.7827.55)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [80814fd7e41b3acfe04ecb669336e1b2, findElement {using=css selector, value=div.alert.alert--error, div.alert.alert--success}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.55, chrome: {chromedriverVersion: 149.0.7827.55 (3188f8a607ae..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42620}, goog:processID: 28184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:42620/devtoo..., se:cdpVersion: 149.0.7827.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 80814fd7e41b3acfe04ecb669336e1b2&#13;
+co.edu.udea.qa.finanzaspersonales.questions.MensajeAlerta.answeredBy(MensajeAlerta.java:20)&#13;
+co.edu.udea.qa.finanzaspersonales.questions.MensajeAlerta.answeredBy(MensajeAlerta.java:12)&#13;
 co.edu.udea.qa.finanzaspersonales.stepdefinitions.RegistrarTransaccionSteps.verificarMensaje(RegistrarTransaccionSteps.java:104)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
-</system-err></testcase><testcase name="Failed login due to unregistered user"><failure message="&#10;Expected: a string containing &quot;Correo o contraseña incorrectos&quot;&#10;     but: was &quot;✕&#10;Correo o contrasena incorrectos&quot;" type="java.lang.AssertionError">
-Expected: a string containing "Correo o contraseña incorrectos"
-     but: was "✕
-Correo o contrasena incorrectos"</failure><system-err>
-Expected: a string containing "Correo o contraseña incorrectos"
-     but: was "✕
-Correo o contrasena incorrectos"&#13;
+</system-err></testcase><testcase name="Failed login due to unregistered user"><error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div.alert.alert--error, div.alert.alert--success&quot;}&#10;  (Session info: chrome=149.0.7827.55)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: '4.16.1', revision: '9b4c83354e'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [80814fd7e41b3acfe04ecb669336e1b2, findElement {using=css selector, value=div.alert.alert--error, div.alert.alert--success}]&#10;Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.55, chrome: {chromedriverVersion: 149.0.7827.55 (3188f8a607ae..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42620}, goog:processID: 28184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:42620/devtoo..., se:cdpVersion: 149.0.7827.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 80814fd7e41b3acfe04ecb669336e1b2" type="org.openqa.selenium.NoSuchElementException">no such element: Unable to locate element: {"method":"css selector","selector":"div.alert.alert--error, div.alert.alert--success"}
+  (Session info: chrome=149.0.7827.55)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [80814fd7e41b3acfe04ecb669336e1b2, findElement {using=css selector, value=div.alert.alert--error, div.alert.alert--success}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.55, chrome: {chromedriverVersion: 149.0.7827.55 (3188f8a607ae..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42620}, goog:processID: 28184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:42620/devtoo..., se:cdpVersion: 149.0.7827.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 80814fd7e41b3acfe04ecb669336e1b2</error><system-err>no such element: Unable to locate element: {"method":"css selector","selector":"div.alert.alert--error, div.alert.alert--success"}
+  (Session info: chrome=149.0.7827.55)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [80814fd7e41b3acfe04ecb669336e1b2, findElement {using=css selector, value=div.alert.alert--error, div.alert.alert--success}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.55, chrome: {chromedriverVersion: 149.0.7827.55 (3188f8a607ae..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42620}, goog:processID: 28184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:42620/devtoo..., se:cdpVersion: 149.0.7827.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 80814fd7e41b3acfe04ecb669336e1b2&#13;
+co.edu.udea.qa.finanzaspersonales.questions.MensajeAlerta.answeredBy(MensajeAlerta.java:20)&#13;
+co.edu.udea.qa.finanzaspersonales.questions.MensajeAlerta.answeredBy(MensajeAlerta.java:12)&#13;
 co.edu.udea.qa.finanzaspersonales.stepdefinitions.RegistrarTransaccionSteps.verificarMensaje(RegistrarTransaccionSteps.java:104)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;

@@ -1,10 +1,10 @@
 package co.edu.udea.qa.finanzaspersonales.tasks;
 
-import co.edu.udea.qa.finanzaspersonales.interactions.ClickRegistrar;
-import co.edu.udea.qa.finanzaspersonales.interactions.IngresarConcepto;
-import co.edu.udea.qa.finanzaspersonales.interactions.IngresarFecha;
-import co.edu.udea.qa.finanzaspersonales.interactions.IngresarMonto;
-import co.edu.udea.qa.finanzaspersonales.interactions.SeleccionarCategoria;
+import co.edu.udea.qa.finanzaspersonales.interactions.transacciones.ClickRegistrar;
+import co.edu.udea.qa.finanzaspersonales.interactions.transacciones.IngresarConcepto;
+import co.edu.udea.qa.finanzaspersonales.interactions.transacciones.IngresarFecha;
+import co.edu.udea.qa.finanzaspersonales.interactions.transacciones.IngresarMonto;
+import co.edu.udea.qa.finanzaspersonales.interactions.transacciones.SeleccionarCategoria;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;

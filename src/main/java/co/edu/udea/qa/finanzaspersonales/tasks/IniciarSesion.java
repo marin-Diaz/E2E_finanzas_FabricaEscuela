@@ -1,11 +1,12 @@
 package co.edu.udea.qa.finanzaspersonales.tasks;
 
+import co.edu.udea.qa.finanzaspersonales.interactions.autenticacion.IngresarEmail;
+import co.edu.udea.qa.finanzaspersonales.interactions.autenticacion.IngresarPassword;
 import co.edu.udea.qa.finanzaspersonales.userinterfaces.AutenticacionUI;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
 
 public class IniciarSesion implements Task {
 
@@ -28,10 +29,10 @@ public class IniciarSesion implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         if (!correo.isEmpty()) {
-            actor.attemptsTo(Enter.theValue(correo).into(AutenticacionUI.INPUT_EMAIL));
+            actor.attemptsTo(IngresarEmail.conValor(correo));
         }
         if (!contrasena.isEmpty()) {
-            actor.attemptsTo(Enter.theValue(contrasena).into(AutenticacionUI.INPUT_PASSWORD));
+            actor.attemptsTo(IngresarPassword.conValor(contrasena));
         }
         actor.attemptsTo(Click.on(AutenticacionUI.BOTON_SUBMIT));
     }
