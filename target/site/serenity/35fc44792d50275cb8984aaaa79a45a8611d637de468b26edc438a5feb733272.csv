@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Register expense","Failed expense registration due to empty amount","SUCCESS","2026-06-10T07:39:57.1193242-05:00[America/Bogota]","0.0","2.43"
+"Register expense","Failed expense registration due to no category selected","SUCCESS","2026-06-10T07:40:12.931669-05:00[America/Bogota]","0.0","2.4"
+"Register income","Failed income registration due to empty amount","SUCCESS","2026-06-10T07:51:27.9112183-05:00[America/Bogota]","0.0","2.42"
+"Register income","Failed income registration due to no category selected","SUCCESS","2026-06-10T07:51:46.1055712-05:00[America/Bogota]","0.0","2.3"
+"View transaction history","Successful history query with transactions","SUCCESS","2026-06-10T07:41:27.0545212-05:00[America/Bogota]","0.0","6.26"

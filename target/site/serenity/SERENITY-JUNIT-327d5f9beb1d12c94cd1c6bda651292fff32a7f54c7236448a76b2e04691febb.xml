@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="3" name="User login" skipped="0" tests="4" time="7.73" timestamp="2026-06-10 07:36:45"><testcase name="Successful login with valid credentials"/><testcase name="Failed login due to incorrect credentials"><failure message="&#10;Expected: a string containing &quot;Correo o contraseña incorrectos&quot;&#10;     but: was &quot;✕&#10;Correo o contrasena incorrectos&quot;" type="java.lang.AssertionError">
+Expected: a string containing "Correo o contraseña incorrectos"
+     but: was "✕
+Correo o contrasena incorrectos"</failure><system-err>
+Expected: a string containing "Correo o contraseña incorrectos"
+     but: was "✕
+Correo o contrasena incorrectos"&#13;
+co.edu.udea.qa.finanzaspersonales.stepdefinitions.RegistrarTransaccionSteps.verificarMensaje(RegistrarTransaccionSteps.java:104)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase><testcase name="Failed login due to empty fields"><failure message="&#10;Expected: a string containing &quot;Error de validación en los datos enviados&quot;&#10;     but: was &quot;✕&#10;Error de validacion en los datos enviados&quot;" type="java.lang.AssertionError">
+Expected: a string containing "Error de validación en los datos enviados"
+     but: was "✕
+Error de validacion en los datos enviados"</failure><system-err>
+Expected: a string containing "Error de validación en los datos enviados"
+     but: was "✕
+Error de validacion en los datos enviados"&#13;
+co.edu.udea.qa.finanzaspersonales.stepdefinitions.RegistrarTransaccionSteps.verificarMensaje(RegistrarTransaccionSteps.java:104)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase><testcase name="Failed login due to unregistered user"><failure message="&#10;Expected: a string containing &quot;Correo o contraseña incorrectos&quot;&#10;     but: was &quot;✕&#10;Correo o contrasena incorrectos&quot;" type="java.lang.AssertionError">
+Expected: a string containing "Correo o contraseña incorrectos"
+     but: was "✕
+Correo o contrasena incorrectos"</failure><system-err>
+Expected: a string containing "Correo o contraseña incorrectos"
+     but: was "✕
+Correo o contrasena incorrectos"&#13;
+co.edu.udea.qa.finanzaspersonales.stepdefinitions.RegistrarTransaccionSteps.verificarMensaje(RegistrarTransaccionSteps.java:104)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase></testsuite>

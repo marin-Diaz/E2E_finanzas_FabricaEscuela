@@ -1,2 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Register expense","Successful expense registration with valid data","SUCCESS","2026-06-09T18:14:20.5445144-05:00[America/Bogota]","0.0","11.3"
+"Register user","Failed registration due to invalid password","SUCCESS","2026-06-10T07:38:13.4092071-05:00[America/Bogota]","0.0","0.28"

@@ -13,6 +13,8 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.webdriver.ThucydidesWebDriverSupport;
+import net.thucydides.model.environment.SystemEnvironmentVariables;
+import net.thucydides.model.util.EnvironmentVariables;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,6 +27,11 @@ public class AutenticacionSteps {
 
     private Actor usuario;
 
+    private java.lang.String getBaseUrl() {
+        EnvironmentVariables env = SystemEnvironmentVariables.createEnvironmentVariables();
+        return env.getProperty("webdriver.base.url", "https://finance-app-ui.vercel.app");
+    }
+
     @Before("@autenticacion")
     public void configurarEscenario() {
         OnStage.setTheStage(new OnlineCast());
@@ -34,12 +41,12 @@ public class AutenticacionSteps {
 
     @Given("I am on the login page")
     public void navegarALogin() {
-        usuario.attemptsTo(Open.url("https://finance-app-ui.vercel.app/login"));
+        usuario.attemptsTo(Open.url(getBaseUrl() + "/login"));
     }
 
     @Given("I am on the registration page")
     public void navegarARegistro() {
-        usuario.attemptsTo(Open.url("https://finance-app-ui.vercel.app/registro"));
+        usuario.attemptsTo(Open.url(getBaseUrl() + "/registro"));
     }
 
     @When("I log in with email {string} and password {string}")

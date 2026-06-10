@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Register user","Successful user registration","ERROR","2026-06-10T07:37:35.6672977-05:00[America/Bogota]","0.0","3.39"
+"Register user","Failed registration due to already registered email","FAILURE","2026-06-10T07:38:01.4006802-05:00[America/Bogota]","0.0","0.27"

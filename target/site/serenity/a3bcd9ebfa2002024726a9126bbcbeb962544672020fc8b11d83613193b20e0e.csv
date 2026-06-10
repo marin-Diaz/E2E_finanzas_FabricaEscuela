@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"User login","Failed login due to incorrect credentials","FAILURE","2026-06-10T07:37:05.3551277-05:00[America/Bogota]","0.0","0.25"
+"User login","Failed login due to empty fields","FAILURE","2026-06-10T07:37:16.4548287-05:00[America/Bogota]","0.0","0.27"
+"User login","Failed login due to unregistered user","FAILURE","2026-06-10T07:37:24.2109176-05:00[America/Bogota]","0.0","0.25"
+"Register user","Failed registration due to already registered email","FAILURE","2026-06-10T07:38:01.4006802-05:00[America/Bogota]","0.0","0.27"
+"Register user","Failed registration due to empty fields","SUCCESS","2026-06-10T07:39:15.7815656-05:00[America/Bogota]","0.0","0.25"

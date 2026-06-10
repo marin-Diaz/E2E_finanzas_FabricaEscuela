@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="1" name="Register user" skipped="0" tests="7" time="4.2" timestamp="2026-06-10 07:37:35"><testcase name="Successful user registration"><error message="Expected condition failed: waiting for url to contain &quot;/verificar&quot;. Current url: &quot;https://finance-app-ui.vercel.app/registro&quot; (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.16.1', revision: '9b4c83354e'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'&#10;Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade&#10;Build info: version: '4.16.1', revision: '9b4c83354e'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.TimeoutException">Expected condition failed: waiting for url to contain "/verificar". Current url: "https://finance-app-ui.vercel.app/registro" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: driver.version: unknown</error><system-err>Expected condition failed: waiting for url to contain "/verificar". Current url: "https://finance-app-ui.vercel.app/registro" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: net.thucydides.core.webdriver.DevToolsWebDriverFacade
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: driver.version: unknown&#13;
+co.edu.udea.qa.finanzaspersonales.stepdefinitions.AutenticacionSteps.verificarRedirectVerificacion(AutenticacionSteps.java:82)&#13;
+✽.I am redirected to the verification page(file:///C:/Workspace/E2E_finanzas_FrabricaE/src/test/resources/features/autenticacion/registro_usuario.feature:10)&#13;
+</system-err></testcase><testcase name="Failed registration due to already registered email"><failure message="&#10;Expected: a string containing &quot;El correo ya está registrado&quot;&#10;     but: was &quot;✕&#10;El correo ya esta registrado&quot;" type="java.lang.AssertionError">
+Expected: a string containing "El correo ya está registrado"
+     but: was "✕
+El correo ya esta registrado"</failure><system-err>
+Expected: a string containing "El correo ya está registrado"
+     but: was "✕
+El correo ya esta registrado"&#13;
+co.edu.udea.qa.finanzaspersonales.stepdefinitions.RegistrarTransaccionSteps.verificarMensaje(RegistrarTransaccionSteps.java:104)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase><testcase name="Failed registration due to invalid password"/><testcase name="Failed registration due to empty fields"/></testsuite>

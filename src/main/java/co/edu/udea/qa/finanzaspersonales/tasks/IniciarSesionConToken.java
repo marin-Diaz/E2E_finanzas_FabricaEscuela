@@ -8,6 +8,8 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.webdriver.ThucydidesWebDriverSupport;
+import net.thucydides.model.environment.SystemEnvironmentVariables;
+import net.thucydides.model.util.EnvironmentVariables;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 
@@ -23,22 +25,34 @@ public class IniciarSesionConToken implements Task {
         return Tasks.instrumented(IniciarSesionConToken.class, token);
     }
 
+    private java.lang.String getBaseUrl() {
+        EnvironmentVariables env = SystemEnvironmentVariables.createEnvironmentVariables();
+        return env.getProperty("webdriver.base.url", "https://finance-app-ui.vercel.app");
+    }
+
+    private java.lang.String getUserEmail() {
+        EnvironmentVariables env = SystemEnvironmentVariables.createEnvironmentVariables();
+        return env.getProperty("serenity.user.email", "andrea.marin1713@gmail.com");
+    }
+
+    private java.lang.String getUserPassword() {
+        EnvironmentVariables env = SystemEnvironmentVariables.createEnvironmentVariables();
+        return env.getProperty("serenity.user.password", "Mipass123!");
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         JavascriptExecutor js = (JavascriptExecutor)
                 ThucydidesWebDriverSupport.getDriver();
 
-        // Si ya estamos en dashboard, solo scroll al top y esperar
         java.lang.String urlActual = ThucydidesWebDriverSupport.getDriver().getCurrentUrl();
         if (urlActual != null && urlActual.contains("dashboard")) {
-            // Navegar al dashboard de nuevo para limpiar el formulario
             actor.attemptsTo(
-                    Open.url("https://finance-app-ui.vercel.app/dashboard")
+                    Open.url(getBaseUrl() + "/dashboard")
             );
             return;
         }
 
-        // Login por UI
         Target INPUT_EMAIL = Target.the("email")
                 .located(By.cssSelector("input[type='email']"));
         Target INPUT_PASSWORD = Target.the("password")
@@ -47,12 +61,12 @@ public class IniciarSesionConToken implements Task {
                 .located(By.cssSelector("button[type='submit']"));
 
         actor.attemptsTo(
-                Open.url("https://finance-app-ui.vercel.app")
+                Open.url(getBaseUrl())
         );
 
         actor.attemptsTo(
-                Enter.theValue("andrea.marin1713@gmail.com").into(INPUT_EMAIL),
-                Enter.theValue("Mipass123!").into(INPUT_PASSWORD),
+                Enter.theValue(getUserEmail()).into(INPUT_EMAIL),
+                Enter.theValue(getUserPassword()).into(INPUT_PASSWORD),
                 Click.on(BOTON_LOGIN)
         );
     }
